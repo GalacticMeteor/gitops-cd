@@ -25,13 +25,11 @@ pipeline {
         
         stage("Update the deployment tags") {
             steps {
-                dir('app') {
-                    sh """
-                        cat webapp-deployment.yaml
-                        sed -i 's|${APP_NAME}:.*|${APP_NAME}:${IMAGE_TAG}|g' webapp-deployment.yaml
-                        cat webapp-deployment.yaml
-                    """
-                }
+                sh """
+                    cat webapp-deployment.yaml
+                    sed -i 's|${APP_NAME}:.*|${APP_NAME}:${IMAGE_TAG}|g' webapp-deployment.yaml
+                    cat webapp-deployment.yaml
+                """
             }
         }
         
