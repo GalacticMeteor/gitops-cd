@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: myimagesregistry.azurecr.io/devops-app:1.0.0-41
+          image: galacticmeteor/devops-app:1.0.0-49
           ports:
             - containerPort: 8080
           env:
