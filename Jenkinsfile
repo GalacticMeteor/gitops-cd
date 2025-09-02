@@ -37,8 +37,7 @@ pipeline {
         
         stage("Push the changed deployment file to Git") {
             steps {
-                dir('app') {
-                    sh """
+                sh """
                         git config --global user.name "galacticmeteor"
                         git config --global user.email "hafsichiheb@gmail.com"
                         git add webapp-deployment.yaml
@@ -46,7 +45,6 @@ pipeline {
                     """
                     withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
                         sh "git push https://github.com/GalacticMeteor/gitops-cd.git main"
-                    }
                 }
             }
         }
