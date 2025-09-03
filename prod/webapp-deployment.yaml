@@ -4,7 +4,7 @@ metadata:
   name: webapp-deployment
   namespace: prod
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: webapp
@@ -24,7 +24,7 @@ spec:
               memory: "512Mi"
             limits:
               cpu: "1"
-              memory: "2Gi"
+              memory: "3Gi"
           env:
             - name: JAVA_OPTS
               valueFrom:
