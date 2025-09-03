@@ -18,6 +18,13 @@ spec:
           image: galacticmeteor/devops-app:1.0.0-59
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
           env:
             - name: JAVA_OPTS
               valueFrom:
