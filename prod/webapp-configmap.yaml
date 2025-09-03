@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: webapp-config
+  namespace: prod
 data:
   JAVA_OPTS: "-Xmx512m -Xms256m"
   CATALINA_OPTS: "-Dfile.encoding=UTF-8"

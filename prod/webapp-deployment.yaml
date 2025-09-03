@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp-deployment
+  namespace: prod
 spec:
   replicas: 2
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: galacticmeteor/devops-app:1.0.0-58
+          image: galacticmeteor/devops-app:1.0.0-53
           ports:
             - containerPort: 8080
           env:
