@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: galacticmeteor/devops-app:1.0.0-60
+          image: galacticmeteor/devops-app:1.0.0-61
           ports:
             - containerPort: 8080
           resources:
